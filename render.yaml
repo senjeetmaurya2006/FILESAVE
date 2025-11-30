@@ -1,0 +1,20 @@
+
+services:
+  - type: worker
+    name: telegram-file-saver-bot
+    env: python
+    rootDirectory: .
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python bot.py"
+    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        value: 7777682673:AAHW4eHWndoPGS0kuz6sqNvBJ_Gw3IV1tfE
+      - key: BOT_USERNAME
+        value: mypersonalgyan_bot
+      - key: STORAGE_CHAT_ID
+        value: -1003421567383
+      - key: OWNER_ID
+        value: "1972024725"
+      - key: DEBUG
+        value: "1"
